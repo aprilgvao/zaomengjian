@@ -10,16 +10,12 @@
 <body>
   <div class="page-noise"></div>
   <header class="nav">
-    <a class="brand" href="#top">
-      <span class="brand-star">✦</span>
-      <b>造梦间</b>
-      <em>DREAM ROOM</em>
-    </a>
+    <a class="brand brand-logo" href="#top" aria-label="造梦间首页"><img src="assets/logo.png" alt="造梦间 Dream Room"></a>
     <nav>
       <a href="#project">制作档案</a>
-      <a href="commission.html">定制说明</a>
-      <a href="#process">制作流程</a>
+      <a href="commission.html">定制价格</a>
       <a href="request.html">提交需求</a>
+      <a href="faq.html">FAQ</a>
     </nav>
     <a class="nav-ticket" href="request.html"><span>OPEN</span> 提交需求</a>
   </header>
@@ -42,7 +38,7 @@
         </div>
         <div class="hero-actions">
           <a class="btn-fill" href="#project">▶ 查看制作档案</a>
-          <a class="btn-line" href="#commission">定制说明 ↗</a>
+          <a class="btn-line" href="commission.html">定制价格 ↗</a>
         </div>
         <div class="hero-meta">
           <span>STATUS<br><b>IN DEVELOPMENT</b></span>
@@ -102,103 +98,40 @@
       </div>
     </section>
 
-    <section class="manifesto">
-      <img src="assets/park-sunset.jpg" alt="夕阳游乐园">
-      <div class="manifesto-shade"></div>
-      <div class="manifesto-card">
-        <span class="num">02</span>
-        <small>WHAT IS AN OC GAME?</small>
-        <h2>OC 不只存在于<br><i>设定图里。</i></h2>
-        <p>她可以说话，可以与你相遇；<br>也可以因为你的选择，走向不同结局。</p>
-        <strong>把属于角色的故事，做成真正可以游玩的视觉小说。</strong>
+    <section class="home-shortcuts" id="commission">
+      <div class="shortcut-intro">
+        <div class="shortcut-scene"><img src="assets/library.jpg" alt="图书馆场景"><span>STORY START / 你的 OC 可以从任何场景开始</span></div>
+        <div class="shortcut-copy">
+          <span>COMMISSION / QUICK START</span>
+          <h2>想把自己的 OC<br><i>做成可以玩的故事？</i></h2>
+          <p>从一个角色、一段关系或一个故事念头开始。立绘、场景与文字会被整理成真正可以点击游玩的 AVG。</p>
+          <div class="cast-peek"><img src="assets/female-student.png" alt="学生角色"><img src="assets/male-student.png" alt="学生角色"><img src="assets/female-casual.png" alt="日常角色"><b>OC → STORY → GAME</b></div>
+        </div>
       </div>
-      <div class="manifesto-script" aria-hidden="true">Make it playable.</div>
+      <div class="shortcut-grid">
+        <a class="shortcut-card price-card" href="commission.html"><small>01 / PRICE</small><strong>¥98 起</strong><h3>查看定制价格</h3><p>1万字以内基础制作；超出部分按字数增加。</p><b>查看完整说明 ↗</b></a>
+        <a class="shortcut-card request-card" href="request.html"><small>02 / REQUEST</small><span class="round-mark">OC</span><h3>提交你的 OC 资料</h3><p>角色、剧本、素材不需要一次准备完，可以先整理现有内容。</p><b>开始填写 ↗</b></a>
+        <a class="shortcut-card faq-card" href="faq.html"><small>03 / FAQ</small><span class="round-mark">?</span><h3>第一次定制？</h3><p>有效字数、素材版权、剧本模板等问题集中查看。</p><b>常见问题 ↗</b></a>
+      </div>
     </section>
 
-    <section class="commission-section" id="commission">
-      <div class="giant-word soft" aria-hidden="true">CUSTOM FILE</div>
+
+    <section class="process-section home-process" id="process">
+      <div class="giant-word soft" aria-hidden="true">PROCESS</div>
       <div class="file-title-row">
-        <div class="chapter-tag"><span>03</span><b>定制内容</b><em>COMMISSION</em></div><div class="round-chip rc-b">OC</div>
-        <p class="side-copy">像做一张 OC 设定卡一样，<br>把你的角色资料逐项装进游戏。</p>
+        <div class="chapter-tag"><span>02</span><b>制作流程</b><em>PROCESS</em></div>
+        <div class="status-ribbon">4 STEPS / 从设定到游戏</div>
       </div>
 
-      <div class="bubble-field"><span></span><span></span><span></span><span></span></div><div class="commission-deck">
-        <article class="deck-card card-character">
-          <div class="deck-top"><span>01</span><b>CHARACTER</b></div>
-          <img src="assets/girl-pose.png" alt="角色立绘">
-          <div class="deck-copy"><h3>角色</h3><p>角色立绘 / 表情差分<br>服装差分 / 角色演出</p></div>
-          <span class="corner-code">OC-01</span>
-        </article>
-        <article class="deck-card card-story">
-          <div class="deck-top"><span>02</span><b>STORY</b></div>
-          <div class="story-cut"><img src="assets/park-sunset.jpg" alt="故事场景"></div>
-          <div class="deck-copy"><h3>故事</h3><p>原创剧情 / OC × OC<br>梦向 / 日常 / 奇幻 / 恋爱</p></div>
-          <span class="corner-code">ST-02</span>
-        </article>
-        <article class="deck-card card-interaction">
-          <div class="deck-top"><span>03</span><b>INTERACTION</b></div>
-          <div class="choice-ui"><button>CHOICE A</button><button>CHOICE B</button><button>CHOICE C</button><div class="choice-line">你的选择，会改变故事。</div></div>
-          <div class="deck-copy"><h3>互动</h3><p>剧情选择 / 故事分支<br>多结局 / 特殊事件</p></div>
-          <span class="corner-code">UI-03</span>
-        </article>
-        <article class="deck-card card-visual">
-          <div class="deck-top"><span>04</span><b>VISUAL</b></div>
-          <div class="visual-collage"><img src="assets/station.jpg"><img src="assets/onsen.jpg"></div>
-          <div class="deck-copy"><h3>视觉</h3><p>CG / 背景 / 专属 UI<br>标题界面 / 音乐氛围</p></div>
-          <span class="corner-code">VS-04</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="character-showcase">
-      <div class="showcase-head">
-        <span>CHARACTER DISPLAY</span>
-        <h2>角色不是素材，<br><i>而是故事的主角。</i></h2>
-      </div>
-      <div class="char-layout">
-        <div class="char-card blue-card">
-          <div class="char-name"><small>01 / MESSAGE</small><h3>小雨</h3><p>“终于来了。”</p></div>
-          <img src="assets/girl-pose.png" alt="小雨">
-          <div class="thumbs"><img src="assets/girl-wave.png"><img src="assets/girl-pose.png"></div>
-        </div>
-        <div class="char-card dark-card">
-          <div class="char-name"><small>02 / MESSAGE</small><h3>角色关系</h3><p>单角色 / 双角色 / 多角色故事</p></div>
-          <img src="assets/boy-talk.png" alt="男性角色">
-          <div class="thumbs"><img src="assets/boy-pose.png"><img src="assets/boy-talk.png"></div>
+      <div class="process-visual">
+        <div class="process-scene"><img src="assets/council-room.jpg" alt="会议室场景"><span>WORK FILE / 从资料整理到成品交付</span><img class="process-person" src="assets/female-office.png" alt="工作人员角色"></div>
+        <div class="process-track">
+          <article class="process-card"><span>01</span><small>SUBMIT</small><h3>提交 OC 资料</h3><p>设定 / 立绘 / 剧本 / 想法</p></article>
+          <article class="process-card"><span>02</span><small>CONFIRM</small><h3>确认制作内容</h3><p>字数 / 素材 / 功能 / 角色</p></article>
+          <article class="process-card"><span>03</span><small>BUILD</small><h3>进入游戏制作</h3><p>整理 / 配置 / 制作 / 测试</p></article>
+          <article class="process-card"><span>04</span><small>DELIVER</small><h3>交付可玩游戏</h3><p>检查 / 打包 / 网页试玩</p></article>
         </div>
       </div>
-    </section>
-
-    <section class="process-section" id="process">
-      <div class="giant-word" aria-hidden="true">PROCESS</div>
-      <div class="file-title-row">
-        <div class="chapter-tag"><span>04</span><b>制作流程</b><em>HOW IT WORKS</em></div>
-      </div>
-      <div class="process-track">
-        <div class="process-card"><span>01</span><small>INPUT</small><h3>提交 OC 资料</h3><p>角色图片、设定、关系与故事想法。</p></div>
-        <i>→</i>
-        <div class="process-card"><span>02</span><small>PLAN</small><h3>确认游戏方案</h3><p>确定长度、角色数量、素材与功能。</p></div>
-        <i>→</i>
-        <div class="process-card"><span>03</span><small>BUILD</small><h3>进入制作</h3><p>剧本整理 → 素材 → 游戏制作 → 测试。</p></div>
-        <i>→</i>
-        <div class="process-card"><span>04</span><small>PLAY</small><h3>获得你的游戏</h3><p>得到真正可以游玩的 OC 视觉小说。</p></div>
-      </div>
-    </section>
-
-    <section class="requirements-section" id="requirements">
-      <div class="req-inner">
-        <div class="req-heading">
-          <span>05 / REQUIREMENTS</span>
-          <h2>开始之前，<br><i>需要准备什么？</i></h2>
-          <p>不需要一次把所有东西都整理得完美。<br>有多少资料，就先从多少资料开始。</p>
-        </div>
-        <div class="req-stack">
-          <article><b>01</b><span>IMAGE FILE</span><h3>OC 图片资料</h3><p>角色设定图、立绘、服装、发型、配色、重要饰品参考。</p></article>
-          <article><b>02</b><span>TEXT FILE</span><h3>角色文字设定</h3><p>姓名、性格、说话方式、世界观、经历与角色关系。</p></article>
-          <article><b>03</b><span>STORY FILE</span><h3>故事与想法</h3><p>完整剧本、故事大纲，或者只是一个想玩的故事方向都可以。</p></article>
-        </div>
-      </div>
-      <div class="req-note">✦ 没有完整资料也没关系 · 可以根据现有设定一起确认制作方案 ✦</div>
     </section>
 
     <section class="contact" id="contact">
@@ -215,8 +148,8 @@
   </main>
 
   <footer>
-    <div class="brand"><span class="brand-star">✦</span><b>造梦间</b><em>DREAM ROOM</em></div>
-    <p>OC 互动故事 / 视觉小说定制 · 网站原型 V0.4</p>
+    <div class="brand brand-logo footer-logo"><img src="assets/logo.png" alt="造梦间 Dream Room"></div>
+    <p>OC 互动故事 / 视觉小说定制 · 网站测试版 / BETA</p>
     <span>FILE END ✦</span>
   </footer>
 </body>
