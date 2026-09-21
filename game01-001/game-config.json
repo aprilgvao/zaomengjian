@@ -1,0 +1,232 @@
+{
+  "version": 16,
+  "title": "",
+  "eyebrow": "【Coki牌】俺家OC！",
+  "hint": "",
+  "startScreen": {
+    "enabled": true,
+    "backgroundImage": "",
+    "backgroundPosition": "center",
+    "foregroundImage": "assets/start-foreground-custom.png",
+    "foregroundX": 51,
+    "foregroundY": 39,
+    "foregroundScale": 1.55,
+    "title": "",
+    "subtitle": "",
+    "prompt": "点击任意按钮开始游戏",
+    "textColor": "#ffffff",
+    "shadeColor": "#000000",
+    "shadeOpacity": 0.16
+  },
+  "audio": {
+    "music": "",
+    "sounds": {
+      "tap": "",
+      "happy": "",
+      "magic": ""
+    },
+    "defaultMusicVolume": 0.6,
+    "defaultSfxVolume": 0.8
+  },
+  "settings": {
+    "revision": 2,
+    "musicEnabled": true,
+    "sfxEnabled": true,
+    "vibrationEnabled": true,
+    "motionEnabled": true
+  },
+  "credits": {
+    "title": "制作人员",
+    "developer": "四月_AprilGvao（QQ：2598937602）",
+    "art": "造梦间（Q群：895204534）&Coki牌模板（Q群：146856525）",
+    "audio": "kenney、小森平、opengameart",
+    "version": "1.0.0"
+  },
+  "theme": {
+    "accent": "#c74343",
+    "accentDark": "#c94f7c",
+    "text": "#674653",
+    "buttonBackground": "rgba(255,255,255,0.86)",
+    "backgroundImage": "",
+    "backgroundPosition": "center",
+    "backgroundTop": "#fff8f5",
+    "backgroundMiddle": "#fbe2ec",
+    "backgroundBottom": "#dcebf6"
+  },
+  "speech": {
+    "x": 50,
+    "y": 65,
+    "width": 260,
+    "autoHeight": true,
+    "height": 58,
+    "fontSize": 14,
+    "textColor": "#704a58",
+    "background": "#ffffff",
+    "backgroundOpacity": 0.94,
+    "borderColor": "#c74343",
+    "borderWidth": 1,
+    "radius": 18,
+    "nameX": 18,
+    "nameY": -8,
+    "nameColor": "#ffffff",
+    "nameFontSize": 14,
+    "nameGlowColor": "#c74343"
+  },
+  "buttons": [
+    {
+      "id": "hello",
+      "iconKey": "hello",
+      "label": "打招呼",
+      "backgroundMode": "default",
+      "x": 14,
+      "y": 82,
+      "width": 78,
+      "height": 52,
+      "visible": true
+    },
+    {
+      "id": "talk",
+      "iconKey": "talk",
+      "label": "对话",
+      "backgroundMode": "default",
+      "x": 38,
+      "y": 82,
+      "width": 78,
+      "height": 52,
+      "visible": true
+    },
+    {
+      "id": "pat",
+      "iconKey": "pat",
+      "label": "摸摸头",
+      "backgroundMode": "default",
+      "x": 62,
+      "y": 82,
+      "width": 78,
+      "height": 52,
+      "visible": true
+    },
+    {
+      "id": "gift",
+      "iconKey": "gift",
+      "label": "送礼物",
+      "backgroundMode": "default",
+      "x": 86,
+      "y": 82,
+      "width": 78,
+      "height": 52,
+      "visible": true
+    },
+    {
+      "id": "zoom",
+      "iconKey": "zoom",
+      "label": "过来",
+      "backgroundMode": "theme",
+      "x": 28,
+      "y": 91,
+      "width": 132,
+      "height": 52,
+      "visible": true,
+      "textColor": "#ffffff",
+      "iconColor": "#ffffff"
+    },
+    {
+      "id": "dress",
+      "iconKey": "dress",
+      "label": "换装",
+      "backgroundMode": "theme",
+      "x": 72,
+      "y": 91,
+      "width": 132,
+      "height": 52,
+      "visible": true,
+      "textColor": "#ffffff",
+      "iconColor": "#ffffff"
+    }
+  ],
+  "characters": [
+    {
+      "id": "character-1",
+      "name": "四时",
+      "accent": "#c74343",
+      "x": 2,
+      "y": 13,
+      "scale": 1.89,
+      "zoomScale": 1.6,
+      "zoomX": 0,
+      "zoomY": 43,
+      "selectorImage": "",
+      "selectorNameX": 8,
+      "selectorNameY": 78,
+      "outfits": [
+        {
+          "name": "初始OC",
+          "path": "assets/outfit-1-1789662306100.png"
+        },
+        {
+          "name": "蓝色制服",
+          "path": "assets/outfit-2-1789662309192.png"
+        }
+      ],
+      "dialogues": {
+        "welcome": [
+          "欢迎回来，今天也一起玩吧！"
+        ],
+        "hello": [
+          "你也好呀",
+          "今天见到你真开心！"
+        ],
+        "talk": [
+          "今天过得怎么样？",
+          "我刚刚正好想到你啦。",
+          "要不要一起去吃甜点？",
+          "再陪我一会儿嘛。"
+        ],
+        "pat": [
+          "嘿嘿，好温柔呀",
+          "再摸一下也可以哦。"
+        ],
+        "gift": [
+          "哇！是送给我的吗？",
+          "谢谢你，我会好好珍惜的！"
+        ],
+        "dress": [
+          "换好啦",
+          "这套衣服怎么样？"
+        ],
+        "zoom": [
+          "找我过来干嘛？"
+        ],
+        "zoomBack": [
+          "好啦，我回去啦。"
+        ],
+        "switch": [
+          "换我来陪你吧！"
+        ]
+      },
+      "effects": {
+        "welcome": "fade",
+        "hello": "shakeX",
+        "talk": "zoomPulse",
+        "pat": "moveY",
+        "gift": "bounce",
+        "dress": "sparkle",
+        "zoom": "zoomPulse",
+        "zoomBack": "fade",
+        "switch": "fade"
+      },
+      "particles": {
+        "welcome": "none",
+        "hello": "none",
+        "talk": "none",
+        "pat": "hearts",
+        "gift": "candyMix",
+        "dress": "sparkle",
+        "zoom": "none",
+        "zoomBack": "none",
+        "switch": "sparkle"
+      }
+    }
+  ],
+  "defaultCharacterId": "character-1"
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#f7b8ca" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>心动日常</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" id="game" aria-label="互动游戏">
+      <section class="start-screen" id="startScreen" role="button" tabindex="0" aria-label="点击任意按钮开始游戏">
+        <div class="start-screen-shade" aria-hidden="true"></div>
+        <img class="start-screen-foreground hidden" id="startForeground" alt="开始界面装饰" draggable="false" />
+        <div class="start-screen-content">
+          <h2 id="startTitle"></h2>
+          <p id="startSubtitle">【Coki牌】俺家OC！</p>
+          <span id="startPrompt">点击任意按钮开始游戏</span>
+        </div>
+      </section>
+      <div class="decor decor-a" aria-hidden="true"></div>
+      <div class="decor decor-b" aria-hidden="true"></div>
+      <header class="topbar">
+        <div><p class="eyebrow" id="eyebrow">【Coki牌】俺家OC！</p><h1 id="gameTitle"></h1></div>
+        <div class="top-actions">
+          <button class="settings-button" id="settingsButton" type="button" aria-label="打开设置"></button>
+          <button class="settings-button character-switch-button hidden" id="characterSwitchButton" type="button" aria-label="切换角色"></button>
+        </div>
+      </header>
+      <div class="speech hidden" id="speech" role="status" aria-live="polite"><strong class="speaker-name" id="speakerName">小桃</strong><span id="speechText">今天也要开心哦！</span><i aria-hidden="true"></i></div>
+      <section class="stage">
+        <div class="character-position" id="characterPosition">
+          <div class="character-wrap" id="characterWrap">
+            <div class="mood-badge hidden" id="moodBadge" aria-hidden="true">♥</div>
+            <img id="character" class="character" src="assets/character-default.png" alt="游戏角色" draggable="false" />
+            <div class="character-shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+      <div class="button-ring" id="buttonRing" aria-label="互动操作"></div>
+      <p class="game-hint" id="hint"></p>
+      <div class="toast hidden" id="toast" role="status"></div><div class="particles" id="particles" aria-hidden="true"></div>
+      <section class="wardrobe hidden" id="wardrobe" aria-label="衣柜">
+        <button class="wardrobe-backdrop" data-close-wardrobe type="button" aria-label="关闭衣柜"></button>
+        <div class="wardrobe-sheet">
+          <div class="wardrobe-head"><div><small>WARDROBE</small><h2>今天穿什么？</h2></div><button data-close-wardrobe type="button" aria-label="关闭">×</button></div>
+          <div class="outfit-grid" id="outfitGrid"></div>
+        </div>
+      </section>
+      <section class="character-picker hidden" id="characterPicker" aria-label="选择角色">
+        <button class="modal-backdrop" data-close-character-picker type="button" aria-label="关闭角色选择"></button>
+        <div class="character-picker-sheet">
+          <header class="sheet-head"><div><small>CHARACTERS</small><h2>选择角色</h2></div><button data-close-character-picker type="button" aria-label="关闭角色选择">×</button></header>
+          <div class="character-picker-list" id="characterPickerList"></div>
+          <p class="character-picker-hint">点击角色即可切换</p>
+        </div>
+      </section>
+      <section class="settings-modal hidden" id="settingsModal" aria-label="游戏设置">
+        <button class="modal-backdrop" data-close-settings type="button" aria-label="关闭设置"></button>
+        <div class="settings-sheet">
+          <header class="sheet-head"><div><small>SETTINGS</small><h2>设置</h2></div><button data-close-settings type="button" aria-label="关闭设置">×</button></header>
+          <div class="setting-group">
+            <div class="setting-row"><span><b>背景音乐</b><small>游戏中的循环音乐</small></span><label class="switch"><input id="musicEnabled" type="checkbox" /><i></i></label></div>
+            <label class="volume-row"><span>音乐音量</span><input id="musicVolume" type="range" min="0" max="1" step="0.05" /><output id="musicVolumeOut">60%</output></label>
+            <div class="setting-row"><span><b>游戏音效</b><small>按钮与互动反馈声音</small></span><label class="switch"><input id="sfxEnabled" type="checkbox" /><i></i></label></div>
+            <label class="volume-row"><span>音效音量</span><input id="sfxVolume" type="range" min="0" max="1" step="0.05" /><output id="sfxVolumeOut">80%</output></label>
+          </div>
+          <div class="setting-group compact">
+            <div class="setting-row"><span><b>震动反馈</b><small>点击互动按钮时轻微震动</small></span><label class="switch"><input id="vibrationEnabled" type="checkbox" /><i></i></label></div>
+            <div class="setting-row"><span><b>立绘动画</b><small>关闭后减少摇晃与闪光效果</small></span><label class="switch"><input id="motionEnabled" type="checkbox" /><i></i></label></div>
+          </div>
+          <div class="settings-actions single">
+            <button id="creditsButton" type="button"></button>
+          </div>
+          <p class="version-text" id="versionText">版本 1.0.0</p>
+        </div>
+      </section>
+      <section class="credits-modal hidden" id="creditsModal" aria-label="制作人员">
+        <button class="modal-backdrop" data-close-credits type="button" aria-label="关闭制作人员"></button>
+        <div class="credits-sheet">
+          <header class="sheet-head"><div><small>CREDITS</small><h2 id="creditsTitle">制作人员</h2></div><button data-close-credits type="button" aria-label="关闭制作人员">×</button></header>
+          <dl class="credits-list">
+            <div><dt>开发者</dt><dd id="creditDeveloper"></dd></div>
+            <div><dt>美术素材</dt><dd id="creditArt"></dd></div>
+            <div><dt>音乐与音效素材</dt><dd id="creditAudio"></dd></div>
+          </dl>
+          <button class="credits-back" id="creditsBackButton" type="button">返回设置</button>
+        </div>
+      </section>
+    </main>
+    <aside class="landscape-warning"><span>↻</span><strong>请将手机竖过来</strong><p>这是一款竖屏互动游戏</p></aside>
+    <script src="app.js"></script>
+  </body>
+</html>
